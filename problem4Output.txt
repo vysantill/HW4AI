@@ -1,0 +1,58 @@
+% Checking upload ... % Checker ran ... % No errors ...
+% START OF SYSTEM OUTPUT
+Running theorem proving
+Running: /home/tptp/Systems/Vampire---5.1.1/vampire --input_syntax tptp --mode casc -m 16384 --cores 7 -t 60 /tmp/QIbxu1sEda/SOT_u5SIeC
+% (2244432)Detected 'Essentially Bernays–Schönfinkel–Ramsey OR Essentially ground' problem, will run a specialized EPR schedule (with support for satisfiability detection).
+% (2244437)lrs+1_1024_to=lpo:random_seed=3311185041:amm=off_600 on SOT_u5SIeC for (600ds/0Mi)
+% (2244438)fmb+10_1_sas=cadical:random_seed=2829796954:i=150016_600 on SOT_u5SIeC for (600ds/150016Mi)
+% (2244440)ott+21_1_sil=128000:fs=off:lcm=predicate:random_seed=1454006492:i=102:av=off:fsr=off_1 on SOT_u5SIeC for (1ds/102Mi)
+% (2244439)ott+11_2:1_bsr=on:plsq=on:prc=on:plsqc=2:plsqr=16065853,524288:lsd=10:sac=on:prac=on:random_seed=609477747:s2a=on:s2at=2:add=on:i=250008:bs=unit_only:doe=on:bd=all:nm=4:gsp=on:rawr=on_600 on SOT_u5SIeC for (600ds/250008Mi)
+% The problem is propositional so there are no sorts!
+% (2244441)dis+10_1_bsr=unit_only:sil=2000:avsqc=5:sac=on:nicw=on:random_seed=1490664788:avsq=on:i=109:aac=none_1 on SOT_u5SIeC for (1ds/109Mi)
+% (2244442)lrs+35_1024_to=lpo:sil=64000:random_seed=1415677976:i=235:fsr=off:amm=off_2 on SOT_u5SIeC for (2ds/235Mi)
+% TRYING []
+% (2244444)fmb+10_1_sas=cadical:sil=16000:random_seed=1528459062:i=102_1 on SOT_u5SIeC for (1ds/102Mi)
+% The problem is propositional so there are no sorts!
+% (2244438) found proof, printing to "/tmp/vampire-proof-2244432-2244438"...
+% TRYING []
+% (2244444) found proof, printing to "/tmp/vampire-proof-2244432-2244444"...
+% (2244438)...printing done.
+% (2244444)...printing done.
+% (2244438)Refutation found. Thanks to Tanya!
+% SZS status Unsatisfiable for SOT_u5SIeC
+% SZS output start Proof for SOT_u5SIeC
+fof(f2,axiom,(
+  ann | bill),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','ann_or_bill')).
+fof(f3,axiom,(
+  ~ann | ~bill),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','not_both_ann_bill')).
+fof(f4,axiom,(
+  bill | carl),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','bill_or_carl')).
+fof(f5,axiom,(
+  ~bill | ~carl),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','not_both_bill_carl')).
+fof(f6,negated_conjecture,(
+  ann | carl),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','negated_goal_1')).
+fof(f7,negated_conjecture,(
+  ~ann | ~carl),
+  file('/tmp/QIbxu1sEda/SOT_u5SIeC','negated_goal_2')).
+fof(f8,plain,(
+  $false),
+  inference(finite_model_not_found_(exhaustively_excluded_all_possible_domain_size_assignments),[],[f2,f3,f4,f5,f6,f7])).
+% SZS output end Proof for SOT_u5SIeC
+% (2244438)------------------------------
+% (2244438)Version: Vampire 5.1.1 (commit fc9ba0056 on 2026-10-27 18:21:03 +0200)
+% (2244438)Linked with Z3 4.14.0.0 3c47fd96cf5645d0c42b2c819d9e9a84380aa721 z3-4.8.4-9178-g3c47fd96c
+% (2244438)CaDiCaL version: 2.1.3-f13d744
+% (2244438)Termination reason: Refutation
+% (2244438)Time elapsed: 0.001 s
+% (2244438)Peak memory usage: 5 MB
+% (2244432)Success in time 0.005 s
+% Vampire exiting
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_u5SIeC - Vampire---5.1.1 says Unsatisfiable - CPU = 0.00 WC = 0.01 
+% OUTPUT: SOT_u5SIeC - Vampire---5.1.1 says Refutation - CPU = 0.00 WC = 0.01 

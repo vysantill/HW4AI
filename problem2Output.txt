@@ -1,0 +1,57 @@
+% Checking upload ... % Checker ran ... % No errors ...
+% START OF SYSTEM OUTPUT
+Running theorem proving
+Running: /home/tptp/Systems/Vampire---5.1.1/vampire --input_syntax tptp --mode casc -m 16384 --cores 7 -t 60 /tmp/pOsnlm_1MT/SOT_nUsBbE
+% (2215474)Detected 'Essentially Bernays–Schönfinkel–Ramsey OR Essentially ground' problem, will run a specialized EPR schedule (with support for satisfiability detection).
+% (2215479)lrs+1_1024_to=lpo:random_seed=1225769479:amm=off_600 on SOT_nUsBbE for (600ds/0Mi)
+% (2215480)fmb+10_1_sas=cadical:random_seed=3628813632:i=150016_600 on SOT_nUsBbE for (600ds/150016Mi)
+% The problem is propositional so there are no sorts!
+% TRYING []
+% (2215485)dis+10_1_bsr=unit_only:sil=2000:avsqc=5:sac=on:nicw=on:random_seed=4158235809:avsq=on:i=109:aac=none_1 on SOT_nUsBbE for (1ds/109Mi)
+% (2215483)ott+21_1_sil=128000:fs=off:lcm=predicate:random_seed=1145152084:i=102:av=off:fsr=off_1 on SOT_nUsBbE for (1ds/102Mi)
+% (2215480) found proof, printing to "/tmp/vampire-proof-2215474-2215480"...
+% (2215482)ott+11_2:1_bsr=on:plsq=on:prc=on:plsqc=2:plsqr=16065853,524288:lsd=10:sac=on:prac=on:random_seed=166676781:s2a=on:s2at=2:add=on:i=250008:bs=unit_only:doe=on:bd=all:nm=4:gsp=on:rawr=on_600 on SOT_nUsBbE for (600ds/250008Mi)
+% (2215486)lrs+35_1024_to=lpo:sil=64000:random_seed=69481082:i=235:fsr=off:amm=off_2 on SOT_nUsBbE for (2ds/235Mi)
+% (2215487)fmb+10_1_sas=cadical:sil=16000:random_seed=625588363:i=102_1 on SOT_nUsBbE for (1ds/102Mi)
+% (2215480)...printing done.
+% The problem is propositional so there are no sorts!
+% TRYING []
+% (2215487) found proof, printing to "/tmp/vampire-proof-2215474-2215487"...
+% (2215480)Refutation found. Thanks to Tanya!
+% SZS status Unsatisfiable for SOT_nUsBbE
+% SZS output start Proof for SOT_nUsBbE
+fof(f1,axiom,(
+  ~ann | ~bill | ~carl | ~dave),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','not_all_attended')).
+fof(f3,axiom,(
+  ~ann | bill),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','ann_implies_bill')).
+fof(f4,axiom,(
+  ~bill | carl),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','bill_implies_carl')).
+fof(f5,axiom,(
+  ~carl | dave),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','carl_implies_dave')).
+fof(f6,axiom,(
+  ~dave | ann),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','dave_implies_ann')).
+fof(f7,negated_conjecture,(
+  ann | bill | carl | dave),
+  file('/tmp/pOsnlm_1MT/SOT_nUsBbE','negated_goal')).
+fof(f8,plain,(
+  $false),
+  inference(finite_model_not_found_(exhaustively_excluded_all_possible_domain_size_assignments),[],[f1,f3,f4,f5,f6,f7])).
+% SZS output end Proof for SOT_nUsBbE
+% (2215480)------------------------------
+% (2215480)Version: Vampire 5.1.1 (commit fc9ba0056 on 2026-10-27 18:21:03 +0200)
+% (2215480)Linked with Z3 4.14.0.0 3c47fd96cf5645d0c42b2c819d9e9a84380aa721 z3-4.8.4-9178-g3c47fd96c
+% (2215480)CaDiCaL version: 2.1.3-f13d744
+% (2215480)Termination reason: Refutation
+% (2215480)Time elapsed: 0.001 s
+% (2215480)Peak memory usage: 5 MB
+% (2215474)Success in time 0.006 s
+% Vampire exiting
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_nUsBbE - Vampire---5.1.1 says Unsatisfiable - CPU = 0.00 WC = 0.02 
+% OUTPUT: SOT_nUsBbE - Vampire---5.1.1 says Refutation - CPU = 0.00 WC = 0.02 
